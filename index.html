@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automatic Timetable Generator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Automatic Timetable Generator</h1>
+
+      <!-- Section Selector -->
+      <div>
+        <label for="sectionSelect">Select Section:</label>
+        <select id="sectionSelect">
+          <option value="1">Section 1</option>
+          <option value="2">Section 2</option>
+        </select>
+      </div>
+
+      <!-- Section 1 Form -->
+      <div id="section1Form" class="section-form">
+        <center><h2>Section 1</h2></center>
+        <form id="timetableForm1">
+          <label for="timeSlots1">Number of Time Slots:</label>
+          <input type="number" id="timeSlots1" min="1" max="10" value="5" required />
+          <br />
+          <label for="subjectCount1">Number of Subjects:</label>
+          <input type="number" id="subjectCount1" min="1" max="10" value="5" required />
+          <br />
+          <div id="subjectTeacherInputs1"></div>
+          <div class="button-group">
+            <button type="submit">Generate Timetable</button>
+            <button id="downloadPDF1" type="button">Download PDF</button>
+          </div>
+        </form>
+        <table id="timetable1" border="1" style="display: none;">
+          <thead>
+            <tr id="timetable-header1"></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <!-- Section 2 Form -->
+      <div id="section2Form" class="section-form">
+      <center> <h2>Section 2</h2></center>
+        <form id="timetableForm2">
+          <label for="timeSlots2">Number of Time Slots:</label>
+          <input type="number" id="timeSlots2" min="1" max="10" value="5" required />
+          <br />
+          <label for="subjectCount2">Number of Subjects:</label>
+          <input type="number" id="subjectCount2" min="1" max="10" value="5" required />
+          <br />
+          <div id="subjectTeacherInputs2"></div>
+          <div class="button-group">
+            <button type="submit">Generate Timetable</button>
+            <button id="downloadPDF2" type="button">Download PDF</button>
+          </div>
+        </form>
+        <table id="timetable2" border="1" style="display: none;">
+          <thead>
+            <tr id="timetable-header2"></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
